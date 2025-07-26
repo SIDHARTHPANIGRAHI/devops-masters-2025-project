@@ -1,5 +1,18 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - echo "Installing dependencies..."
+  build:
+    commands:
+      - echo "Building..."
+      - cd projecttask1
+      - npm install
+      - npm run build
+
 artifacts:
   files:
     - '**/*'
   discard-paths: no
-  base-directory: projecttask1/dist # Make sure this path is correct
+  base-directory: projecttask1/dist
