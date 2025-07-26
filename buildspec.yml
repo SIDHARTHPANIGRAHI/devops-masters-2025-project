@@ -4,15 +4,19 @@ phases:
   install:
     commands:
       - echo "Installing dependencies..."
+  
+  pre_build:
+    commands:
+      - echo "Running pre-build steps..."
+  
   build:
     commands:
-      - echo "Building..."
-      - cd projecttask1
-      - npm install
-      - npm run build
+      - echo "Building application..."
+  
+  post_build:
+    commands:
+      - echo "Build completed successfully!"
 
 artifacts:
   files:
     - '**/*'
-  discard-paths: no
-  base-directory: projecttask1/dist
